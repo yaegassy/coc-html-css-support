@@ -1,0 +1,21 @@
+import { SelectorCompletionItemProvider } from './completion';
+import { ExtensionContext, commands, languages, workspace } from 'coc.nvim';
+
+export async function activate(context: ExtensionContext): Promise<void> {
+  const config = workspace.getConfiguration('html-css-support');
+
+  const isEnable = config.get<boolean>('enable', true);
+  if (!isEnable) {
+    return;
+  }
+
+  const enabledLanguages = config.get<string[]>('enabledLanguages', ['html']);
+  const provider = new SelectorCompletionItemProvider();
+  context.subscriptions.push(
+    commands.registerCommand('html-css-support.dispose', () => provider.dispose()),
+    languages.registerCompletionItemProvider('html-css-support', 'HCS', enabledLanguages, provider),
+    provider
+  );
+}
+
+export function deactivate() {}

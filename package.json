@@ -1,0 +1,96 @@
+{
+  "name": "coc-html-css-support",
+  "version": "0.0.1",
+  "description": "HTML id and class attribute completion for coc.nvim",
+  "author": "yaegassy <yosstools@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "coc.nvim",
+    "vim",
+    "neovim",
+    "css",
+    "html",
+    "twig",
+    "blade",
+    "django",
+    "nunjucks",
+    "mustache",
+    "angular",
+    "react",
+    "vue",
+    "multi-root ready"
+  ],
+  "engines": {
+    "coc": "^0.0.80"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaegassy/coc-html-css-support"
+  },
+  "scripts": {
+    "lint": "eslint src --ext ts",
+    "clean": "rimraf lib",
+    "watch": "node esbuild.js --watch",
+    "build": "node esbuild.js",
+    "prepare": "npm-run-all clean build"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "semi": true
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/parser": "^4.8.2",
+    "@types/css-tree": "^1.0.5",
+    "@types/node-fetch": "^2.5.8",
+    "coc.nvim": "^0.0.80",
+    "esbuild": "^0.8.42",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.2",
+    "css-tree": "^1.1.2",
+    "node-fetch": "^2.6.1"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "coc-html-css-support configuration",
+      "properties": {
+        "html-css-support.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable coc-html-css-support extension"
+        },
+        "html-css-support.enabledLanguages": {
+          "type": "array",
+          "scope": "application",
+          "description": "List of languages which suggestions are desired.",
+          "default": [
+            "html"
+          ]
+        },
+        "html-css-support.styleSheets": {
+          "type": "array",
+          "scope": "resource",
+          "description": "List of local or remote style sheets for suggestions.",
+          "default": []
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "html-css-support.dispose",
+        "title": "Clear cache and reload the stylesheet"
+      }
+    ]
+  }
+}
