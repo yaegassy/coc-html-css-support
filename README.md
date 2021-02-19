@@ -8,14 +8,6 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 
 ## Install
 
-**vim-plug**;
-
-```
-Plug 'yaegassy/coc-html-css-support', {'do': 'yarn install --frozen-lockfile'}
-```
-
-**:CocInstall**: (TODO: publish npm)
-
 `:CocInstall coc-html-css-support`
 
 ## Features
