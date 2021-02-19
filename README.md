@@ -6,8 +6,6 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 
 <img width="780" alt="coc-html-css-support" src="https://user-images.githubusercontent.com/188642/108481317-67cfad80-72db-11eb-91ce-beef57f1e906.png">
 
-**TOPIC:** Supports completion from links and embedded style sheets and more features.
-
 ## Install
 
 **vim-plug**;
@@ -16,7 +14,7 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 Plug 'yaegassy/coc-html-css-support', {'do': 'yarn install --frozen-lockfile'}
 ```
 
-**TODO:**:  publish npm
+**:CocInstall**: (TODO: publish npm)
 
 `:CocInstall coc-html-css-support`
 
