@@ -20,7 +20,7 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 
 ## Configuration options
 
-- `html-css-support.enabled`: Enable coc-html-css-support extension, default: `true`
+- `html-css-support.enable`: Enable coc-html-css-support extension, default: `true`
 - `html-css-support.enabledLanguages`: List of languages which suggestions are desired, default: `["html"]`
 - `html-css-support.styleSheets`: List of local or remote style sheets for suggestions, default: `[]`
 
