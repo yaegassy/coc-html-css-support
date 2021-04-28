@@ -4,7 +4,7 @@
 
 HTML id and class attribute "completion" for [coc.nvim](https://github.com/neoclide/coc.nvim).
 
-<img width="780" alt="coc-html-css-support" src="https://user-images.githubusercontent.com/188642/108481317-67cfad80-72db-11eb-91ce-beef57f1e906.png">
+<img width="780" alt="coc-html-css-support-demo" src="https://user-images.githubusercontent.com/188642/116341049-2b5c8880-a81b-11eb-959e-2d03edda61fd.gif">
 
 ## Install
 
