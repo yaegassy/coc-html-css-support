@@ -53,7 +53,8 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
     "html-css-support.enabledLanguages": [
         "html",
         "vue",
-        "blade"
+        "blade",
+        "htmldjango"
     ]
 }
 ```
