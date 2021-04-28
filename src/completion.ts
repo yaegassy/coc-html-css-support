@@ -268,7 +268,6 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
   }
 
   provideCompletionItems(document: TextDocument, position: Position): ProviderResult<CompletionItem[]> {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     return new Promise((resolve, reject) => {
       const range = Range.create(this.start, position);
       const text = document.getText(range);
@@ -279,9 +278,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
           resolve([...(canComplete[1] === 'id' ? context.ids : context.classes).values()])
         );
       } else {
-        // MEMO: Adjust for undefined output in log.
-        //reject();
-        return;
+        reject([]);
       }
     });
   }
