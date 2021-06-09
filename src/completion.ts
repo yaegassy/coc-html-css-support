@@ -221,7 +221,15 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     const classes = new Map<string, CompletionItem>();
 
     keys.forEach((key) =>
-      this.cache.get(key)?.forEach((e) => (e.kind === CompletionItemKind.Value ? ids : classes).set(e.label, e))
+      ////this.cache.get(key)?.forEach((e) => (e.kind === CompletionItemKind.Value ? ids : classes).set(e.label, e))
+      this.cache.get(key)?.forEach((e) => {
+        const res = e.kind === CompletionItemKind.Value ? ids : classes;
+        // ---- custom fix ----
+        e.label = e.label.replace('\\', '');
+        e.insertText = e.label.replace('\\', '');
+        // ---- /custom fix ----
+        res.set(e.label, e);
+      })
     );
 
     return { ids, classes };
