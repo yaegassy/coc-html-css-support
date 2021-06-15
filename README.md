@@ -54,7 +54,9 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
         "html",
         "vue",
         "blade",
-        "htmldjango"
+        "htmldjango",
+        "typescriptreact",
+        "javascriptreact"
     ]
 }
 ```
