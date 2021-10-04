@@ -1,6 +1,6 @@
 {
   "name": "coc-html-css-support",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "HTML id and class attribute completion for coc.nvim",
   "author": "yaegassy <yosstools@gmail.com>",
   "license": "MIT",
