@@ -276,7 +276,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
   }
 
   provideCompletionItems(document: TextDocument, position: Position): ProviderResult<CompletionItem[]> {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       const range = Range.create(this.start, position);
       const text = document.getText(range);
       const canComplete = this.canComplete.exec(text);
@@ -286,7 +286,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
           resolve([...(canComplete[1] === 'id' ? context.ids : context.classes).values()])
         );
       } else {
-        reject([]);
+        resolve([]);
       }
     });
   }
