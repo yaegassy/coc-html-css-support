@@ -33,7 +33,7 @@
     "clean": "rimraf lib",
     "watch": "node esbuild.js --watch",
     "build": "node esbuild.js",
-    "prepare": "npm-run-all clean build"
+    "prepare": "node esbuild.js"
   },
   "prettier": {
     "singleQuote": true,
