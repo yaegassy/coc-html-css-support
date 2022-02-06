@@ -64,7 +64,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     return folder ? join(isAbsolute(path) ? folder.uri : dirname(uri.fsPath), name) : join(dirname(uri.fsPath), name);
   }
 
-  parseTextToItems(text: string, items: CompletionItem[]) {
+  parseTextToItems(path: string, text: string, items: CompletionItem[]) {
     walk(parse(text), (node) => {
       let kind: CompletionItemKind;
 
@@ -82,6 +82,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
       const resultCompletionItem: CompletionItem = {
         label: node.name,
         kind,
+        detail: 'filename: ' + path,
       };
 
       items.push(resultCompletionItem);
@@ -97,7 +98,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
 
     try {
       const content = await workspace.readFile(path);
-      this.parseTextToItems(content.toString(), items);
+      this.parseTextToItems(basename(path), content.toString(), items);
     } catch (error) {}
 
     this.cache.set(path, items);
@@ -116,7 +117,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
 
       if (res.ok) {
         const text = await res.text();
-        this.parseTextToItems(text, items);
+        this.parseTextToItems(basename(path), text, items);
       }
     } catch (error) {}
 
@@ -144,7 +145,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     let style: string[] | null;
 
     while ((style = findStyles.exec(text)) !== null) {
-      this.parseTextToItems(style[1], items);
+      this.parseTextToItems(basename(uri.fsPath), style[1], items);
     }
 
     this.cache.set(key, items);
@@ -221,7 +222,6 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     const classes = new Map<string, CompletionItem>();
 
     keys.forEach((key) =>
-      ////this.cache.get(key)?.forEach((e) => (e.kind === CompletionItemKind.Value ? ids : classes).set(e.label, e))
       this.cache.get(key)?.forEach((e) => {
         const res = e.kind === CompletionItemKind.Value ? ids : classes;
         // ---- custom fix ----
