@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/css-tree": "^1.0.5",
     "@types/node-fetch": "^2.5.8",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "coc.nvim": "^0.0.80",
     "css-tree": "^1.1.2",
