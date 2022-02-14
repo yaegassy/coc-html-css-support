@@ -1,0 +1,323 @@
+{
+  "version": "1.1",
+  "tags": [],
+  "globalAttributes": [
+    {
+      "name": "x-data",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-init",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-show",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-model",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-text",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-html",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-ref",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-if",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-for",
+      "description": "Alpine.js"
+    },
+    {
+      "name": ":key",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:enter",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:enter-start",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:enter-end",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:leave",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:leave-start",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-transition:leave-end",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-cloak",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:abort",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:blur",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:canplay",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:canplaythrough",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:change",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:click",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:contextmenu",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dblclick",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:drag",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dragend",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dragenter",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dragleave",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dragover",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:dragstart",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:drop",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:durationchange",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:emptied",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:ended",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:error",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:focus",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:input",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:invalid",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:keydown",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:keypress",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:keyup",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:load",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:loadeddata",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:loadedmetadata",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:loadstart",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:mousedown",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:mousemove",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:mouseout",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:mouseover",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:mouseup",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:pause",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:play",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:playing",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:progress",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:ratechange",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:reset",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:resize",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:readystatechange",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:scroll",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:seeked",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:seeking",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:select",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:show",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:stalled",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:submit",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:suspend",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:timeupdate",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:volumechange",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-on:waiting",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:class",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:disabled",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:readonly",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:required",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:checked",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:hidden",
+      "description": "Alpine.js"
+    },
+    {
+      "name": "x-bind:selected",
+      "description": "Alpine.js"
+    }
+  ],
+  "valueSets": []
+}
