@@ -90,6 +90,10 @@
       {
         "command": "html-css-support.dispose",
         "title": "Clear cache and reload the stylesheet"
+      },
+      {
+        "command": "html-css-support.customDataSetup",
+        "title": "Setup `html.customData` to be used in the workspace"
       }
     ]
   }

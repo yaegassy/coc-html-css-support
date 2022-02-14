@@ -17,6 +17,8 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 - Supports template inheritance.
 - Supports additional style sheets.
 - Supports other HTML like languages.
+- Command to make `html.customData` built-in in `coc-html-css-support` available at the workspace level.
+  - Require [coc-html](https://github.com/neoclide/coc-html)
 
 ## Configuration options
 
@@ -27,6 +29,9 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
 ## Commands
 
 - `html-css-support.dispose`: Clear cache and reload the stylesheet
+- `html-css-support.customDataSetup`: Setup `html.customData` in workspace config. Supported customData are as follows
+  - `Alpine.js`
+  - `petite-vue`
 
 ## Example settings
 
@@ -60,6 +65,13 @@ HTML id and class attribute "completion" for [coc.nvim](https://github.com/neocl
     ]
 }
 ```
+
+## What is customData?
+
+You can read more about customData in the following repositories.
+
+- <https://github.com/microsoft/vscode-custom-data>
+- <https://github.com/Microsoft/vscode-html-languageservice/blob/main/docs/customData.md>
 
 ## Thanks
 

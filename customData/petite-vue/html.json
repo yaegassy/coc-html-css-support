@@ -1,0 +1,75 @@
+{
+  "version": "1.1",
+  "tags": [],
+  "globalAttributes": [
+    {
+      "name": "v-scope",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-effect",
+      "description": "petite-vue"
+    },
+    {
+      "name": "@mounted",
+      "description": "petite-vue"
+    },
+    {
+      "name": "@unmounted",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-bind:",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-on:",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-model",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-if",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-else",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-else-if",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-for",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-show",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-html",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-text",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-pre",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-once",
+      "description": "petite-vue"
+    },
+    {
+      "name": "v-cloak",
+      "description": "petite-vue"
+    }
+  ],
+  "valueSets": []
+}
