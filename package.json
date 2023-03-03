@@ -48,7 +48,7 @@
     "@typescript-eslint/parser": "^5.10.2",
     "coc.nvim": "^0.0.82",
     "css-tree": "^1.1.2",
-    "esbuild": "^0.14.18",
+    "esbuild": "^0.16.17",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
