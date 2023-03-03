@@ -14,7 +14,7 @@ export function customDataSetupCommand(context: ExtensionContext) {
     switch (picked) {
       case -1:
         // Cancel!
-        window.showMessage(`It's been cancelled`);
+        window.showInformationMessage(`It's been cancelled`);
         break;
       case 0:
         // Alpine.js
@@ -26,7 +26,7 @@ export function customDataSetupCommand(context: ExtensionContext) {
         break;
       default:
         // Cancel!
-        window.showMessage(`It's been cancelled`);
+        window.showInformationMessage(`It's been cancelled`);
         break;
     }
 
