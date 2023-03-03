@@ -1,6 +1,6 @@
-import { SelectorCompletionItemProvider } from './completion';
-import { ExtensionContext, commands, languages, workspace } from 'coc.nvim';
+import { commands, ExtensionContext, languages, workspace } from 'coc.nvim';
 import { customDataSetupCommand } from './commands';
+import { SelectorCompletionItemProvider } from './completion';
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration('html-css-support');

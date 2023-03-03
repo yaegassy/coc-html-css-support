@@ -1,6 +1,3 @@
-import fetch from 'node-fetch';
-import { parse, walk } from 'css-tree';
-import { basename, dirname, extname, isAbsolute, join } from 'path';
 import {
   CompletionItem,
   CompletionItemKind,
@@ -15,6 +12,9 @@ import {
   Uri,
   workspace,
 } from 'coc.nvim';
+import { parse, walk } from 'css-tree';
+import fetch from 'node-fetch';
+import { basename, dirname, extname, isAbsolute, join } from 'path';
 
 export type Context = {
   ids: Map<string, CompletionItem>;

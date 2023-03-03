@@ -1,4 +1,4 @@
-import { extensions, ExtensionContext, window, workspace } from 'coc.nvim';
+import { ExtensionContext, extensions, window, workspace } from 'coc.nvim';
 import path from 'path';
 
 export function customDataSetupCommand(context: ExtensionContext) {
