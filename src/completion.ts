@@ -221,15 +221,16 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     const ids = new Map<string, CompletionItem>();
     const classes = new Map<string, CompletionItem>();
 
-    keys.forEach((key) =>
-      this.cache.get(key)?.forEach((e) => {
-        const res = e.kind === CompletionItemKind.Value ? ids : classes;
-        // ---- custom fix ----
-        e.label = e.label.replace('\\', '');
-        e.insertText = e.label.replace('\\', '');
-        // ---- /custom fix ----
-        res.set(e.label, e);
-      })
+    keys.forEach(
+      (key) =>
+        this.cache.get(key)?.forEach((e) => {
+          const res = e.kind === CompletionItemKind.Value ? ids : classes;
+          // ---- custom fix ----
+          e.label = e.label.replace('\\', '');
+          e.insertText = e.label.replace('\\', '');
+          // ---- /custom fix ----
+          res.set(e.label, e);
+        }),
     );
 
     return { ids, classes };
@@ -265,8 +266,8 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
             Diagnostic.create(
               Range.create(start, end),
               `CSS selector '${value[1]}' not found.`,
-              DiagnosticSeverity.Information
-            )
+              DiagnosticSeverity.Information,
+            ),
           );
         }
       }
@@ -283,7 +284,7 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
 
       if (canComplete) {
         this.findAll(document).then((context) =>
-          resolve([...(canComplete[1] === 'id' ? context.ids : context.classes).values()])
+          resolve([...(canComplete[1] === 'id' ? context.ids : context.classes).values()]),
         );
       } else {
         resolve([]);

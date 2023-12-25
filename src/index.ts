@@ -15,12 +15,12 @@ export async function activate(context: ExtensionContext): Promise<void> {
   context.subscriptions.push(
     commands.registerCommand('html-css-support.dispose', () => provider.dispose()),
     languages.registerCompletionItemProvider('html-css-support', 'HCS', enabledLanguages, provider),
-    provider
+    provider,
   );
 
   /** MEMO: Custom commands for coc-html-css-support */
   context.subscriptions.push(
-    commands.registerCommand('html-css-support.customDataSetup', customDataSetupCommand(context))
+    commands.registerCommand('html-css-support.customDataSetup', customDataSetupCommand(context)),
   );
 }
 
