@@ -45,7 +45,7 @@
     "@types/node": "^20.10.5",
     "@types/node-fetch": "^2.5.8",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^5.54.0",
+    "@typescript-eslint/parser": "^6.15.0",
     "coc.nvim": "^0.0.82",
     "css-tree": "^1.1.2",
     "esbuild": "^0.16.17",
