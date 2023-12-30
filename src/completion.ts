@@ -12,7 +12,7 @@ import {
   Uri,
   workspace,
 } from 'coc.nvim';
-import { parse, walk } from 'css-tree';
+import { glob } from 'fast-glob';
 import fetch from 'node-fetch';
 import { basename, dirname, extname, isAbsolute, join } from 'path';
 
@@ -65,28 +65,21 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
   }
 
   parseTextToItems(path: string, text: string, items: CompletionItem[]) {
-    walk(parse(text), (node) => {
-      let kind: CompletionItemKind;
+    const regex = /([.#])(-?[_a-zA-Z]+[_a-zA-Z0-9-]*)\s*{([^}]*)}/g;
 
-      switch (node.type) {
-        case 'ClassSelector':
-          kind = CompletionItemKind.Enum;
-          break;
-        case 'IdSelector':
-          kind = CompletionItemKind.Value;
-          break;
-        default:
-          return;
-      }
+    let match: RegExpExecArray | null = null;
+
+    while ((match = regex.exec(text))) {
+      const kind = match[1] === '.' ? CompletionItemKind.Enum : CompletionItemKind.Value;
 
       const resultCompletionItem: CompletionItem = {
-        label: node.name,
+        label: match[2],
         kind,
         detail: 'filename: ' + path,
       };
 
       items.push(resultCompletionItem);
-    });
+    }
   }
 
   async fetchLocal(path: string): Promise<void> {
@@ -98,7 +91,8 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
 
     try {
       const content = await workspace.readFile(path);
-      this.parseTextToItems(basename(path), content.toString(), items);
+      const text = content.toString();
+      this.parseTextToItems(basename(path), text, items);
     } catch (error) {}
 
     this.cache.set(path, items);
@@ -128,10 +122,14 @@ export class SelectorCompletionItemProvider implements CompletionItemProvider, D
     if (this.isRemote.test(path)) {
       await this.fetchRemote(path);
     } else {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const base = basename(uri.fsPath, extname(uri.fsPath));
 
-      path = this.getPath(uri, path.replace(/\${\s*fileBasenameNoExtension\s*}/, base));
-      await this.fetchLocal(path);
+      const paths = isAbsolute(path) ? glob.sync(path) : [path];
+
+      for (const path of paths) {
+        await this.fetchLocal(path);
+      }
     }
 
     return path;
