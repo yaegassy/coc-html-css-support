@@ -19,6 +19,7 @@
     "angular",
     "react",
     "vue",
+    "lit",
     "multi-root ready"
   ],
   "engines": {
