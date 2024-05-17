@@ -73,7 +73,6 @@
         },
         "html-css-support.enabledLanguages": {
           "type": "array",
-          "scope": "application",
           "description": "List of languages which suggestions are desired.",
           "default": [
             "html"
@@ -81,7 +80,6 @@
         },
         "html-css-support.styleSheets": {
           "type": "array",
-          "scope": "resource",
           "description": "List of local or remote style sheets for suggestions.",
           "default": []
         }
