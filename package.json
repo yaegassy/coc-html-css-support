@@ -53,6 +53,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
+    "line-column": "^1.0.2",
     "node-fetch": "^2.6.1",
     "prettier": "^3.1.1",
     "rimraf": "^5.0.1",
@@ -82,12 +83,26 @@
           "type": "array",
           "description": "List of local or remote style sheets for suggestions.",
           "default": []
+        },
+        "html-css-support.autoValidation": {
+          "type": "string",
+          "description": "When to validate class selectors.",
+          "default": "Never",
+          "enum": [
+            "Never",
+            "Save",
+            "Always"
+          ]
         }
       }
     },
     "commands": [
       {
-        "command": "html-css-support.dispose",
+        "command": "html-css-support.validate",
+        "title": "Validate class selectors"
+      },
+      {
+        "command": "html-css-support.clear",
         "title": "Clear cache and reload the stylesheet"
       },
       {

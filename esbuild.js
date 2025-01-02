@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 async function start(watch) {
   await require('esbuild').build({
-    entryPoints: ['src/index.ts'],
+    entryPoints: ['src/extension.ts'],
     bundle: true,
     watch,
     minify: process.env.NODE_ENV === 'production',
